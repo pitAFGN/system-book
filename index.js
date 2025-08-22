@@ -27,7 +27,7 @@ let librosColeccion = [
     descripcion: "Un hombre que despierta convertido en insecto.",
     ubicacion: "Biblioteca Virtual",
     fechaPublicacion: "1915-01-01",
-    editorial: "Kurt Wolff Verlag",
+    editorial: "Sudamericana",
     paginas: 74,
     dimensiones: "Archivo EPUB",
     peso: "1 MB",
@@ -45,7 +45,7 @@ let librosColeccion = [
     descripcion: "La historia del ingenioso hidalgo que enloqueció leyendo libros de caballerías.",
     ubicacion: "Estantería B2",
     fechaPublicacion: "1605-01-16",
-    editorial: "Francisco de Robles",
+    editorial: "Sudamericana",
     paginas: 863,
     dimensiones: "17 x 5 x 24 cm",
     peso: "1.2 kg",
@@ -63,7 +63,7 @@ let librosColeccion = [
     descripcion: "Una crítica social y romántica en la Inglaterra georgiana.",
     ubicacion: "Estantería C1",
     fechaPublicacion: "1813-01-28",
-    editorial: "T. Egerton",
+    editorial: "Sudamericana",
     paginas: 432,
     dimensiones: "14 x 2.5 x 21 cm",
     peso: "0.5 kg",
@@ -81,7 +81,7 @@ let librosColeccion = [
     descripcion: "Una distopía sobre un régimen totalitario y la vigilancia extrema.",
     ubicacion: "Biblioteca Virtual",
     fechaPublicacion: "1949-06-08",
-    editorial: "Secker & Warburg",
+    editorial: "Sudamericana",
     paginas: 328,
     dimensiones: "Archivo PDF",
     peso: "2 MB",
@@ -117,7 +117,7 @@ let librosColeccion = [
     descripcion: "La obsesiva persecución de una ballena blanca por el capitán Ahab.",
     ubicacion: "Estantería E2",
     fechaPublicacion: "1851-10-18",
-    editorial: "Harper & Brothers",
+    editorial: "Reynal & Hitchcock",
     paginas: 635,
     dimensiones: "15 x 4 x 23 cm",
     peso: "0.8 kg",
@@ -135,7 +135,7 @@ let librosColeccion = [
     descripcion: "Un joven estudiante comete un asesinato y enfrenta su conciencia.",
     ubicacion: "Estantería F1",
     fechaPublicacion: "1866-01-01",
-    editorial: "The Russian Messenger",
+    editorial: "Reynal & Hitchcock",
     paginas: 671,
     dimensiones: "16 x 4 x 24 cm",
     peso: "1 kg",
@@ -153,7 +153,7 @@ let librosColeccion = [
     descripcion: "Una tragedia sobre el príncipe de Dinamarca y su dilema existencial.",
     ubicacion: "Estantería G3",
     fechaPublicacion: "1603-07-26",
-    editorial: "Nicholas Ling",
+    editorial: "Reynal & Hitchcock",
     paginas: 342,
     dimensiones: "14 x 2 x 20 cm",
     peso: "0.45 kg",
@@ -171,7 +171,7 @@ let librosColeccion = [
     descripcion: "Un día en la vida de Leopold Bloom en Dublín.",
     ubicacion: "Estantería H2",
     fechaPublicacion: "1922-02-02",
-    editorial: "Shakespeare and Company",
+    editorial: "Reynal & Hitchcock",
     paginas: 730,
     dimensiones: "17 x 5 x 24 cm",
     peso: "1.3 kg",
@@ -189,7 +189,7 @@ let librosColeccion = [
     descripcion: "Una exploración del tiempo, la memoria y la experiencia personal.",
     ubicacion: "Estantería I4",
     fechaPublicacion: "1913-11-14",
-    editorial: "Grasset",
+    editorial: "Gallimard",
     paginas: 4215,
     dimensiones: "20 x 12 x 25 cm",
     peso: "3 kg",
@@ -207,7 +207,7 @@ let librosColeccion = [
     descripcion: "Un viaje alegórico por el infierno, purgatorio y paraíso.",
     ubicacion: "Estantería J1",
     fechaPublicacion: "1320-01-01",
-    editorial: "Giovanni Boccaccio",
+    editorial: "Gallimard",
     paginas: 798,
     dimensiones: "16 x 4 x 23 cm",
     peso: "1.1 kg",
@@ -243,7 +243,7 @@ let librosColeccion = [
     descripcion: "Una novela experimental que permite múltiples formas de lectura.",
     ubicacion: "Estantería L2",
     fechaPublicacion: "1963-01-01",
-    editorial: "Sudamericana",
+    editorial: "Gallimard",
     paginas: 600,
     dimensiones: "15 x 3.5 x 22 cm",
     peso: "0.9 kg",
@@ -261,7 +261,7 @@ let librosColeccion = [
     descripcion: "La historia de un hombre que vende su alma al diablo a cambio de conocimiento.",
     ubicacion: "Estantería M5",
     fechaPublicacion: "1808-01-01",
-    editorial: "Cotta",
+    editorial: "Gallimard",
     paginas: 462,
     dimensiones: "14 x 3 x 21 cm",
     peso: "0.6 kg",
@@ -297,7 +297,7 @@ let librosColeccion = [
     descripcion: "Un joven viaja al pueblo fantasma de Comala en busca de su padre.",
     ubicacion: "Estantería O4",
     fechaPublicacion: "1955-01-01",
-    editorial: "Fondo de Cultura Económica",
+    editorial: "Bompiani",
     paginas: 124,
     dimensiones: "13 x 1.5 x 20 cm",
     peso: "0.25 kg",
@@ -315,7 +315,7 @@ let librosColeccion = [
     descripcion: "La historia de Jean Valjean y la lucha por la redención en una Francia convulsa.",
     ubicacion: "Estantería P3",
     fechaPublicacion: "1862-01-01",
-    editorial: "A. Lacroix & Verboeckhoven",
+    editorial: "Bompiani",
     paginas: 1463,
     dimensiones: "19 x 6 x 26 cm",
     peso: "2.5 kg",
@@ -333,7 +333,7 @@ let librosColeccion = [
     descripcion: "El clásico relato del conde Drácula y su intento de trasladarse a Inglaterra.",
     ubicacion: "Estantería Q2",
     fechaPublicacion: "1897-05-26",
-    editorial: "Archibald Constable",
+    editorial: "Bompiani",
     paginas: 418,
     dimensiones: "14 x 2.5 x 21 cm",
     peso: "0.55 kg",
@@ -357,7 +357,8 @@ const readline = require('readline');
         console.log (" 2. Agregar libro")
         console.log (" 3. quitar libros")
         console.log (" 4. Estadisticas de los libros")
-        console.log(" 5. salir del sistema")
+        console.log (" 5. Editoriales")
+        console.log(" 6. salir del sistema")
 
         rl.question ("Elige una de los opciones: ", (opcion) =>  {
             switch (opcion) {
@@ -365,22 +366,24 @@ const readline = require('readline');
                     mostrarLibros();
                     Menu();
 
-                    break;
+                    break
                 case "2" :
                     agregarLibro();
                     break
                 case "3" :
                     eliminarLibro();
-                    
-                    break;
+                    break
                 case "4" :
-                    mostrarEstadisticas ();
-                    
-                    break;
-                case "5" :
+                    mostrarEstadisticas();
+                    break
+                case "5":
+                  Editoriales ();
+                  Menu();
+                    break
+                case "6" :
                     console.log ("Adios")
                     rl.close();
-                    break;
+                    break
                     default: 
                     console.log("Intenta otra opcion")
                     break;
@@ -398,7 +401,7 @@ const readline = require('readline');
             }))
            )
         }
-        function agregarLibro () {
+        function agregarLibro () {       
             console.log ("Agrega un libro: ")
                     rl.question("Título: ", (titulo) => {
           rl.question("Autor: ", (autor) => {
@@ -482,6 +485,16 @@ const readline = require('readline');
             )
             Menu();
         }
-        
 
+        function Editoriales () {
+          const editorial = librosColeccion.reduce((acumulador, libro) => {
+            if (!acumulador [libro.editorial]) {
+              acumulador[libro.editorial] = [];
+            }
+            acumulador[libro.editorial].push(libro.titulo);
+            return acumulador;
+          }, {});
+          console.table(editorial)
+        }
+        
     }
