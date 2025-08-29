@@ -3,7 +3,7 @@ let librosColeccion = [
     titulo: "El Señor de los Anillos: La Comunidad del Anillo",
     autor: "J.R.R. Tolkien",
     formato: "Tapa dura",
-    precio: 25.99,
+    precio: 50.99,
     peso: "1.2 kg",
     estado: "Nuevo",
     ubicacionFisica: "Estante A1",
@@ -20,7 +20,7 @@ let librosColeccion = [
     titulo: "1984",
     autor: "George Orwell",
     formato: "Tapa blanda",
-    precio: 14.99,
+    precio: 55.99,
     peso: "0.5 kg",
     estado: "Usado",
     ubicacionFisica: "Estante A2",
@@ -37,14 +37,14 @@ let librosColeccion = [
     titulo: "Cien años de soledad",
     autor: "Gabriel García Márquez",
     formato: "Tapa dura",
-    precio: 19.99,
+    precio: 99.99,
     peso: "0.9 kg",
     estado: "Nuevo",
     ubicacionFisica: "Estante A3",
     fechaPublicacion: "1967-05-30",
     generos: ["Realismo mágico", "Literatura latinoamericana"],
     idioma: "Español",
-    descripcion: "La historia de la familia Buendía en Macondo.",
+    descripcion: "a",
     ISBN: "978-0307474728",
     dimensiones: "14 x 3 x 22 cm",
     editorial: "Allen & Unwin",
@@ -54,7 +54,7 @@ let librosColeccion = [
     titulo: "Don Quijote de la Mancha",
     autor: "Miguel de Cervantes",
     formato: "Tapa dura",
-    precio: 29.99,
+    precio: 70.99,
     peso: "1.3 kg",
     estado: "Nuevo",
     ubicacionFisica: "Estante A4",
@@ -99,7 +99,7 @@ let librosColeccion = [
     ISBN: "978-0747532699",
     dimensiones: "14 x 3 x 21 cm",
     editorial: "Bloomsbury",
-    numeroPaginas: 223
+    numeroPaginas: 89
   },
   {
     titulo: "El Hobbit",
@@ -116,7 +116,7 @@ let librosColeccion = [
     ISBN: "978-0547928227",
     dimensiones: "15 x 3 x 22 cm",
     editorial: "Bloomsbury",
-    numeroPaginas: 310
+    numeroPaginas: 99
   },
   {
     titulo: "El nombre del viento",
@@ -167,7 +167,7 @@ let librosColeccion = [
     ISBN: "978-1451673319",
     dimensiones: "14 x 2 x 21 cm",
     editorial: "Bloomsbury",
-    numeroPaginas: 194
+    numeroPaginas: 100
   },
   {
     titulo: "El código Da Vinci",
@@ -703,7 +703,7 @@ function Menu() {
   console.log(" 5. Estadisticas de los libros")
   console.log(" 6. Editoriales")
   console.log(" 7. Submenu (iteraciones)")
-  console.log(" 8. descuento")
+  console.log(" 8. Submenu (manejo metodos de array)")
   console.log(" 9. reiniciar libros")
   console.log(" 10. Salir del sistema")
 
@@ -716,7 +716,7 @@ function Menu() {
       case "2":
         agregarLibro();
         break
-        case "3":
+      case "3":
         agregar10LibrosPredeterminados()
         break
       case "4":
@@ -729,12 +729,11 @@ function Menu() {
         Editoriales();
         Menu();
         break
-        case "7":
+      case "7":
         subMenu();
         break;
       case "8":
-        listadoLibrosConDescuento()
-        Menu();
+        segundoSubMenu();
         break;
       case "9":
         reinicio();
@@ -743,9 +742,11 @@ function Menu() {
       case "10":
         console.log("Adios")
         rl.close();
+        process.exit(0);
         break
       default:
         console.log("Intenta otra opcion")
+        Menu()
         break;
     }
   })
@@ -815,182 +816,182 @@ function Menu() {
     });
   }
   function agregar10LibrosPredeterminados() {
-  const librosPredeterminados = [
-    {
-      titulo: "Dune",
-      autor: "Frank Herbert",
-      formato: "Tapa dura",
-      editorial: "Chilton Books",
-      precio: 35.00,
-      ISBN: "978-0441172719",
-      generos: ["Ciencia ficción", "Aventura"],
-      numeroPaginas: 688,
-      idioma: "Inglés",
-      descripcion: "La historia de Paul Atreides en el desértico planeta Arrakis.",
-      fechaPublicacion: "1965-08-01",
-      peso: 950,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C1",
-      dimensiones: "16 x 24 cm"
-    },
-    {
-      titulo: "Neuromante",
-      autor: "William Gibson",
-      formato: "Tapa blanda",
-      editorial: "Ace",
-      precio: 20.00,
-      ISBN: "978-0441569595",
-      generos: ["Ciberpunk", "Ciencia ficción"],
-      numeroPaginas: 271,
-      idioma: "Inglés",
-      descripcion: "El hacker Case en un mundo de inteligencia artificial y megacorporaciones.",
-      fechaPublicacion: "1984-07-01",
-      peso: 400,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C2",
-      dimensiones: "14 x 21 cm"
-    },
-    {
-      titulo: "El perfume",
-      autor: "Patrick Süskind",
-      formato: "Tapa blanda",
-      editorial: "Diogenes Verlag",
-      precio: 18.00,
-      ISBN: "978-3257228007",
-      generos: ["Histórico", "Misterio"],
-      numeroPaginas: 255,
-      idioma: "Alemán",
-      descripcion: "Jean-Baptiste Grenouille y su obsesión por crear el perfume perfecto.",
-      fechaPublicacion: "1985-01-01",
-      peso: 350,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C3",
-      dimensiones: "13 x 20 cm"
-    },
-    {
-      titulo: "El club de la lucha",
-      autor: "Chuck Palahniuk",
-      formato: "Tapa blanda",
-      editorial: "W. W. Norton & Company",
-      precio: 17.50,
-      ISBN: "978-0393355949",
-      generos: ["Drama", "Psicológico"],
-      numeroPaginas: 218,
-      idioma: "Inglés",
-      descripcion: "Un narrador anónimo y su alter ego Tyler Durden crean un club secreto.",
-      fechaPublicacion: "1996-08-17",
-      peso: 300,
-      estado: "Usado",
-      ubicacionFisica: "Estante C4",
-      dimensiones: "13 x 20 cm"
-    },
-    {
-      titulo: "American Gods",
-      autor: "Neil Gaiman",
-      formato: "Tapa dura",
-      editorial: "HarperCollins",
-      precio: 32.00,
-      ISBN: "978-0380973651",
-      generos: ["Fantasía", "Mitología"],
-      numeroPaginas: 465,
-      idioma: "Inglés",
-      descripcion: "Shadow descubre el choque entre dioses antiguos y modernos en EE. UU.",
-      fechaPublicacion: "2001-06-19",
-      peso: 800,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C5",
-      dimensiones: "15 x 23 cm"
-    },
-    {
-      titulo: "El libro de arena",
-      autor: "Jorge Luis Borges",
-      formato: "Tapa blanda",
-      editorial: "Emecé",
-      precio: 15.00,
-      ISBN: "978-9507315668",
-      generos: ["Cuentos", "Ficción especulativa"],
-      numeroPaginas: 181,
-      idioma: "Español",
-      descripcion: "Colección de cuentos donde lo infinito y lo imposible se mezclan.",
-      fechaPublicacion: "1975-01-01",
-      peso: 280,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C6",
-      dimensiones: "12 x 19 cm"
-    },
-    {
-      titulo: "Pedro Páramo",
-      autor: "Juan Rulfo",
-      formato: "Tapa blanda",
-      editorial: "Fondo de Cultura Económica",
-      precio: 12.00,
-      ISBN: "978-9681604433",
-      generos: ["Realismo mágico", "Drama"],
-      numeroPaginas: 124,
-      idioma: "Español",
-      descripcion: "Juan Preciado llega a Comala en busca de su padre, Pedro Páramo.",
-      fechaPublicacion: "1955-01-01",
-      peso: 250,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C7",
-      dimensiones: "12 x 18 cm"
-    },
-    {
-      titulo: "Rayuela",
-      autor: "Julio Cortázar",
-      formato: "Tapa dura",
-      editorial: "Editorial Sudamericana",
-      precio: 28.00,
-      ISBN: "978-9500728181",
-      generos: ["Experimental", "Realismo mágico"],
-      numeroPaginas: 600,
-      idioma: "Español",
-      descripcion: "Una novela que puede leerse en orden lineal o a saltos.",
-      fechaPublicacion: "1963-01-01",
-      peso: 900,
-      estado: "Usado",
-      ubicacionFisica: "Estante C8",
-      dimensiones: "15 x 23 cm"
-    },
-    {
-      titulo: "La casa de los espíritus",
-      autor: "Isabel Allende",
-      formato: "Tapa blanda",
-      editorial: "Plaza & Janés",
-      precio: 22.50,
-      ISBN: "978-8401337200",
-      generos: ["Realismo mágico", "Drama familiar"],
-      numeroPaginas: 490,
-      idioma: "Español",
-      descripcion: "La saga de la familia Trueba enmarcada en la historia de Chile.",
-      fechaPublicacion: "1982-01-01",
-      peso: 750,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C9",
-      dimensiones: "14 x 21 cm"
-    },
-    {
-      titulo: "Los detectives salvajes",
-      autor: "Roberto Bolaño",
-      formato: "Tapa blanda",
-      editorial: "Anagrama",
-      precio: 26.00,
-      ISBN: "978-8433967597",
-      generos: ["Narrativa contemporánea"],
-      numeroPaginas: 609,
-      idioma: "Español",
-      descripcion: "Dos jóvenes poetas y su búsqueda literaria y existencial.",
-      fechaPublicacion: "1998-01-01",
-      peso: 850,
-      estado: "Nuevo",
-      ubicacionFisica: "Estante C10",
-      dimensiones: "15 x 23 cm"
-    }
-  ];
+    const librosPredeterminados = [
+      {
+        titulo: "Dune",
+        autor: "Frank Herbert",
+        formato: "Tapa dura",
+        editorial: "Chilton Books",
+        precio: 35.00,
+        ISBN: "978-0441172719",
+        generos: ["Ciencia ficción", "Aventura"],
+        numeroPaginas: 688,
+        idioma: "Inglés",
+        descripcion: "La historia de Paul Atreides en el desértico planeta Arrakis.",
+        fechaPublicacion: "1965-08-01",
+        peso: 950,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C1",
+        dimensiones: "16 x 24 cm"
+      },
+      {
+        titulo: "Neuromante",
+        autor: "William Gibson",
+        formato: "Tapa blanda",
+        editorial: "Ace",
+        precio: 20.00,
+        ISBN: "978-0441569595",
+        generos: ["Ciberpunk", "Ciencia ficción"],
+        numeroPaginas: 271,
+        idioma: "Inglés",
+        descripcion: "El hacker Case en un mundo de inteligencia artificial y megacorporaciones.",
+        fechaPublicacion: "1984-07-01",
+        peso: 400,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C2",
+        dimensiones: "14 x 21 cm"
+      },
+      {
+        titulo: "El perfume",
+        autor: "Patrick Süskind",
+        formato: "Tapa blanda",
+        editorial: "Diogenes Verlag",
+        precio: 18.00,
+        ISBN: "978-3257228007",
+        generos: ["Histórico", "Misterio"],
+        numeroPaginas: 255,
+        idioma: "Alemán",
+        descripcion: "Jean-Baptiste Grenouille y su obsesión por crear el perfume perfecto.",
+        fechaPublicacion: "1985-01-01",
+        peso: 350,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C3",
+        dimensiones: "13 x 20 cm"
+      },
+      {
+        titulo: "El club de la lucha",
+        autor: "Chuck Palahniuk",
+        formato: "Tapa blanda",
+        editorial: "W. W. Norton & Company",
+        precio: 17.50,
+        ISBN: "978-0393355949",
+        generos: ["Drama", "Psicológico"],
+        numeroPaginas: 218,
+        idioma: "Inglés",
+        descripcion: "Un narrador anónimo y su alter ego Tyler Durden crean un club secreto.",
+        fechaPublicacion: "1996-08-17",
+        peso: 300,
+        estado: "Usado",
+        ubicacionFisica: "Estante C4",
+        dimensiones: "13 x 20 cm"
+      },
+      {
+        titulo: "American Gods",
+        autor: "Neil Gaiman",
+        formato: "Tapa dura",
+        editorial: "HarperCollins",
+        precio: 32.00,
+        ISBN: "978-0380973651",
+        generos: ["Fantasía", "Mitología"],
+        numeroPaginas: 465,
+        idioma: "Inglés",
+        descripcion: "Shadow descubre el choque entre dioses antiguos y modernos en EE. UU.",
+        fechaPublicacion: "2001-06-19",
+        peso: 800,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C5",
+        dimensiones: "15 x 23 cm"
+      },
+      {
+        titulo: "El libro de arena",
+        autor: "Jorge Luis Borges",
+        formato: "Tapa blanda",
+        editorial: "Emecé",
+        precio: 15.00,
+        ISBN: "978-9507315668",
+        generos: ["Cuentos", "Ficción especulativa"],
+        numeroPaginas: 181,
+        idioma: "Español",
+        descripcion: "Colección de cuentos donde lo infinito y lo imposible se mezclan.",
+        fechaPublicacion: "1975-01-01",
+        peso: 280,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C6",
+        dimensiones: "12 x 19 cm"
+      },
+      {
+        titulo: "Pedro Páramo",
+        autor: "Juan Rulfo",
+        formato: "Tapa blanda",
+        editorial: "Fondo de Cultura Económica",
+        precio: 12.00,
+        ISBN: "978-9681604433",
+        generos: ["Realismo mágico", "Drama"],
+        numeroPaginas: 124,
+        idioma: "Español",
+        descripcion: "Juan Preciado llega a Comala en busca de su padre, Pedro Páramo.",
+        fechaPublicacion: "1955-01-01",
+        peso: 250,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C7",
+        dimensiones: "12 x 18 cm"
+      },
+      {
+        titulo: "Rayuela",
+        autor: "Julio Cortázar",
+        formato: "Tapa dura",
+        editorial: "Editorial Sudamericana",
+        precio: 28.00,
+        ISBN: "978-9500728181",
+        generos: ["Experimental", "Realismo mágico"],
+        numeroPaginas: 600,
+        idioma: "Español",
+        descripcion: "Una novela que puede leerse en orden lineal o a saltos.",
+        fechaPublicacion: "1963-01-01",
+        peso: 900,
+        estado: "Usado",
+        ubicacionFisica: "Estante C8",
+        dimensiones: "15 x 23 cm"
+      },
+      {
+        titulo: "La casa de los espíritus",
+        autor: "Isabel Allende",
+        formato: "Tapa blanda",
+        editorial: "Plaza & Janés",
+        precio: 22.50,
+        ISBN: "978-8401337200",
+        generos: ["Realismo mágico", "Drama familiar"],
+        numeroPaginas: 490,
+        idioma: "Español",
+        descripcion: "La saga de la familia Trueba enmarcada en la historia de Chile.",
+        fechaPublicacion: "1982-01-01",
+        peso: 750,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C9",
+        dimensiones: "14 x 21 cm"
+      },
+      {
+        titulo: "Los detectives salvajes",
+        autor: "Roberto Bolaño",
+        formato: "Tapa blanda",
+        editorial: "Anagrama",
+        precio: 26.00,
+        ISBN: "978-8433967597",
+        generos: ["Narrativa contemporánea"],
+        numeroPaginas: 609,
+        idioma: "Español",
+        descripcion: "Dos jóvenes poetas y su búsqueda literaria y existencial.",
+        fechaPublicacion: "1998-01-01",
+        peso: 850,
+        estado: "Nuevo",
+        ubicacionFisica: "Estante C10",
+        dimensiones: "15 x 23 cm"
+      }
+    ];
 
-  librosColeccion.push(...librosPredeterminados);
-  console.log("✅ 10 libros predeterminados agregados con éxito");
-  Menu();
+    librosColeccion.push(...librosPredeterminados);
+    console.log("✅ 10 libros predeterminados agregados con éxito");
+    Menu();
   }
   function eliminarLibro() {
     if (librosColeccion.length >= 5) {
@@ -1011,23 +1012,23 @@ function Menu() {
   }
   function mostrarEstadisticas() {
 
-        console.log(`📚 Total de libros: ${librosColeccion.length}`);
+    console.log(`📚 Total de libros: ${librosColeccion.length}`);
 
-          const conteo = librosColeccion.reduce((cuenta, libro) => {
-            cuenta[libro.idioma] = (cuenta[libro.idioma] || 0) + 1;
-            return cuenta;
-          }, {});
-          const formatos = librosColeccion.reduce((formatitos, libro) => {
-            formatitos[libro.formato] = (formatitos[libro.formato] || 0) + 1;
-            return formatitos;
-          }, {});
+    const conteo = librosColeccion.reduce((cuenta, libro) => {
+      cuenta[libro.idioma] = (cuenta[libro.idioma] || 0) + 1;
+      return cuenta;
+    }, {});
+    const formatos = librosColeccion.reduce((formatitos, libro) => {
+      formatitos[libro.formato] = (formatitos[libro.formato] || 0) + 1;
+      return formatitos;
+    }, {});
 
-          const cuenta_genero = {};
-          librosColeccion.forEach(libro => {
-            libro.generos.forEach(genero => {
-              cuenta_genero[genero] = (cuenta_genero[genero] || 0) + 1;
-            });
-          });
+    const cuenta_genero = {};
+    librosColeccion.forEach(libro => {
+      libro.generos.forEach(genero => {
+        cuenta_genero[genero] = (cuenta_genero[genero] || 0) + 1;
+      });
+    });
     console.log("📊 Conteo de libros por idioma: ", conteo);
     console.log("📊 Conteo de libros por formato: ", formatos);
     console.log("📊 Conteo de libros por género: ", cuenta_genero);
@@ -1117,7 +1118,10 @@ function Menu() {
         case "12":
           Menu()
           break;
-
+        default:
+          console.log("intenta otra opcion: ")
+          subMenu()
+          break;
       }
     })
 
@@ -1232,29 +1236,500 @@ function Menu() {
     }
 
   }
-  function segundoSubMenu() {
-    console.log("SUBMENU 2")
-    console.log ("precios mayores de 50")
-    console.log ("resumen numero de paginas (por numero mas alto (titulo, autor, editorial, paginas))")
-    console.log ("orden de libros por numero de paginas (mayor a menor)")
-    console.log ("libros mayores de 11 dolares (titulo, autor, precio.)")
-    console.log ("libros menores de 100 paginas(titulo, autor, editorial y paginas)")
-    console.log ("libros mayores de 20 dolares (titulo, autor, precio)")
-    console.log ("resumen de libros por numero mas alto de paginas (titulo, autor, editorial, paginas ordenados de mayor a menor.) ")
-    console.log ("buscador")
-
-    function precios_mayores_50() {
-     const librosMayores = librosColeccion.filter (libro => libro.precio > 50 )
-    }
-
-    function numero_paginas() {
-      
-    }
-  }
-
   function reinicio() {
     librosColeccion = [...librosRestauracion];
   }
-  
+  function segundoSubMenu() {
+    console.log("SUBMENU 2")
+    console.log("1. descuento")
+    console.log("2. precios mayores de 50")
+    console.log("3. resumen numero de paginas (por numero mas alto (titulo, autor, editorial, paginas))")
+    console.log("4. orden de libros por numero de paginas (mayor a menor)")
+    console.log("5. libros mayores de 11 dolares (titulo, autor, precio.)")
+    console.log("6. libros menores de 100 paginas(titulo, autor, editorial y paginas)")
+    console.log("7. libros mayores de 20 dolares (titulo, autor, precio)")
+    console.log("8. resumen de libros por numero mas alto de paginas (titulo, autor, editorial, paginas ordenados de mayor a menor.) ")
+    console.log("9. buscador")
+    console.log ("10. volver al menu")
+    rl.question("elige una de las opciones: ", (opcion2) => {
+      switch (opcion2) {
+        case "1":
+          listadoLibrosConDescuento();
+          segundoSubMenu();
+          break;
+        case "2":
+          preciosMayores_50();
+          segundoSubMenu();
+          break;
+        case "3":
+          numeroPaginas();
+          segundoSubMenu();
+        case "4":
+          ordenPaginas();
+          segundoSubMenu();
+        case "5":
+          filtro11Dolares();
+          segundoSubMenu();
+          break;
+        case "6":
+          menora100();
+          segundoSubMenu();
+          break;
+        case "7":
+          filtro20Dolares();
+          segundoSubMenu()
+          break;
+        case "8":
+          ordenPaginas2();
+          segundoSubMenu();
+          break;
+        case "9":
+          buscador();
+          break;
+        case "10":
+          Menu();
+          break;
+        default:
+          console.log("intenta otra opcion: ")
+          segundoSubMenu();
+          break;
+      }
+    })
+    function preciosMayores_50() {
+      let librosMayores = librosColeccion.filter(libro => libro.precio > 50).map(libro => ({
 
-}
+        titulo: libro.titulo,
+        autor: libro.autor,
+        precio: libro.precio
+      }));
+      console.log("libros con precios mayores a $50:")
+      console.table(librosMayores);
+    }
+    function numeroPaginas() {
+      const Resumen = librosColeccion.map(libro => ({
+        titulo: libro.titulo,
+        autor: libro.autor,
+        editorial: libro.editorial,
+        numeroPaginas: libro.numeroPaginas
+      }))
+        .sort((x, d) => d.numeroPaginas - x.numeroPaginas);
+      console.table(Resumen)
+    }
+    function ordenPaginas() {
+      const resumenPaginas = librosColeccion.map(libro => ({
+        titulo: libro.titulo,
+        autor: libro.autor,
+        numeroPaginas: libro.numeroPaginas,
+      }))
+        .sort((a, b) => b.numeroPaginas - a.numeroPaginas);
+      console.table(resumenPaginas)
+    }
+    function filtro11Dolares() {
+      let dolares = librosColeccion.filter(libro => libro.precio > 11).map(libro => ({
+        titulo: libro.titulo,
+        autor: libro.autor,
+        precio: libro.precio
+      }))
+      console.log("libros con un precio mayores a $11: ")
+      console.table(dolares);
+    }
+    function menora100() {
+      let paginas100 = librosColeccion.filter(libro => libro.numeroPaginas < 100).map(libro => ({
+        titulo: libro.titulo,
+        autor: libro.autor,
+        editorial: libro.editorial,
+        paginas: libro.numeroPaginas
+      }))
+      console.log("libros con menos de 100 paginas: ")
+      console.table(paginas100);
+    }
+    function filtro20Dolares() {
+      let dolarcitos = librosColeccion.filter(libro => libro.precio > 20).map(libro => ({
+        titulo: libro.titulo,
+        autor: libro.autor,
+        precio: libro.precio
+      }))
+        .sort((z, x) => x.precio - z.precio)
+      console.table(dolarcitos)
+    }
+    function ordenPaginas2() {
+      let resumenPaginas1 = librosColeccion.map(libro => ({
+        titulo: libro.titulo,
+        autor: libro.autor,
+        editorial: libro.editorial,
+        numeroPaginas: libro.numeroPaginas,
+      }))
+        .sort((a, b) => b.numeroPaginas - a.numeroPaginas);
+      console.table(resumenPaginas1);
+    }
+    function buscador() {
+      console.log("BUSCADOR")
+      console.log("1. buscar por titulo")
+      console.log("2. buscar por autor")
+      console.log("3. buscar por fecha de publicacion")
+      console.log("4. buscar por genero")
+      console.log("5. buscar por idioma")
+      console.log("6. buscar por editorial")
+      console.log("7. buscar por ISBN")
+      console.log("8. buscar por ubicacion")
+      console.log("9. buscar por numeroPaginas")
+      console.log("10. buscar por estado")
+      console.log("11. buscar por formato")
+      console.log("12. buscar por precio")
+      console.log("13. buscar por peso")
+      console.log("14. buscar por dimesiones")
+      console.log("15. buscar por descripcion")
+      console.log("16. volver al submenu")
+
+      rl.question("Elige que cosa quieres buscar: ", (opcion3) => {
+        switch (opcion3) {
+          case "1":
+            buscadoTitulo();
+            break;
+          case "2":
+            buscadoAutor()
+            break;
+          case "3":
+            buscadoFecha();
+            break;
+          case "4":
+            buscadoGenero();
+            break;
+          case "5":
+            buscadoIdioma();
+            break;
+          case "6":
+            buscadoEditorial();
+            break;
+          case "7":
+            buscadoISBN()
+            break;
+          case "8":
+            buscadoUbicacion();
+            break;
+          case "9":
+            buscadoPaginas();
+            break;
+          case "10":
+            buscadoEstado();
+            break;
+          case "11":
+            buscadoFormato();
+            break;
+          case "12":
+            buscadoPrecio();
+            break;
+          case "13":
+            buscadoPeso();
+            break;
+          case "14":
+            buscadoDimensiones();
+            break;
+          case "15":
+            buscadoDescripcion();
+            break;
+          case "16":
+            segundoSubMenu();
+            break;
+          default:
+            console.log("Intente de nuevo: ")
+            buscador();
+            break;
+        }
+      })
+
+      function buscadoTitulo() {
+        rl.question("Ingresa el titulo que buscaras: ", (tituloBuscado) => {
+          let librito = librosColeccion.find(libro => libro.titulo.toLowerCase() === tituloBuscado.toLowerCase());
+
+          if (librito) {
+            console.log("titulo encontrado: ")
+            console.table([{
+              titulo: librito.titulo,
+              autor: librito.autor,
+              editorial: librito.editorial,
+              precio: librito.precio
+            }]);
+            buscador()
+          } else {
+            console.log("Libro no encontrado")
+            buscador()
+          }
+        });
+      }
+    }
+    function buscadoAutor() {
+      rl.question("Ingresa el autor que buscaras: ", (autorBuscado) => {
+        let librito = librosColeccion.find(libro => libro.autor.toLowerCase() === autorBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            editorial: librito.editorial,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoFecha() {
+      rl.question("Ingresa la fecha que buscaras: ", (fechaBuscado) => {
+        let librito = librosColeccion.find(libro => libro.fechaPublicacion.toLowerCase() === fechaBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            fechaPublicacion: librito.fechaPublicacion,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoGenero() {
+      rl.question("Ingresa el genero que buscarás: ", (generoBuscado) => {
+        let librito = librosColeccion.find(libro =>
+          Array.isArray(libro.generos) &&
+          libro.generos.some(g => g.toLowerCase() === generoBuscado.toLowerCase())
+        );
+
+        if (librito) {
+          console.log("📚 Libro encontrado:");
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            generos: librito.generos.join(", "), // mostrar géneros bonitos
+            precio: librito.precio
+          }]);
+          buscador();
+        } else {
+          console.log("❌ Libro no encontrado");
+          buscador();
+        }
+      });
+    }
+    function buscadoIdioma() {
+      rl.question("Ingresa el idioma que buscaras: ", (idiomaBuscado) => {
+        let librito = librosColeccion.find(libro => libro.idioma.toLowerCase() === idiomaBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            idioma: librito.idioma,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoEditorial() {
+      rl.question("Ingresa la editorial que buscaras: ", (editorialBuscado) => {
+        let librito = librosColeccion.find(libro => libro.editorial.toLowerCase() === editorialBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            editorial: librito.editorial,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoISBN() {
+      rl.question("Ingresa el ISBN que buscaras: ", (ISBNBuscado) => {
+        let librito = librosColeccion.find(libro => libro.ISBN.toLowerCase() === ISBNBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            ISBN: librito.ISBN,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoUbicacion() {
+      rl.question("Ingresa la ubicacion que buscaras: ", (ubicacionBuscado) => {
+        let librito = librosColeccion.find(libro => libro.ubicacionFisica.toLowerCase() === ubicacionBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            ubicacion: librito.ubicacionFisica,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoPaginas() {
+      rl.question("Ingresa el numero de paginas que buscaras: ", (paginasBuscado) => {
+        // Convertir a número
+        const numBuscado = parseInt(paginasBuscado, 10);
+
+        // Buscar coincidencia exacta
+        let librito = librosColeccion.find(libro => libro.numeroPaginas === numBuscado);
+
+        if (librito) {
+          console.log("📖 Libro encontrado:");
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            numeroPaginas: librito.numeroPaginas,
+            precio: librito.precio
+          }]);
+        } else {
+          console.log("❌ Libro no encontrado");
+        }
+
+        buscador();
+      });
+    }
+    function buscadoEstado() {
+      rl.question("Ingresa el estado que buscaras: ", (estadoBuscado) => {
+        let librito = librosColeccion.find(libro => libro.estado.toLowerCase() === estadoBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            estado: librito.estado,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoFormato() {
+      rl.question("Ingresa el formato que buscaras: ", (formatoBuscado) => {
+        let librito = librosColeccion.find(libro => libro.formato.toLowerCase() === formatoBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            formato: librito.formato,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoPrecio() {
+      rl.question("Ingresa el precio que buscaras: ", (precioBuscado) => {
+        const numBuscado = parseFloat(precioBuscado); // convierte lo que escribe el usuario en número
+        let librito = librosColeccion.find(libro => libro.precio === numBuscado);
+
+        if (librito) {
+          console.log("Título encontrado:");
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            precio: librito.precio
+          }]);
+          buscador();
+        } else {
+          console.log("Libro no encontrado");
+          buscador();
+        }
+      });
+    }
+    function buscadoPeso() {
+      rl.question("Ingresa el peso que buscaras: ", (pesoBuscado) => {
+        let librito = librosColeccion.find(libro => libro.peso.toLowerCase() === pesoBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            peso: librito.peso,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoDimensiones() {
+      rl.question("Ingresa lsa dimensiones que buscaras: ", (dimensionesBuscado) => {
+        let librito = librosColeccion.find(libro => libro.dimensiones.toLowerCase() === dimensionesBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            dimensiones: librito.dimensiones,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+    function buscadoDescripcion() {
+      rl.question("Ingresa la descripcion que buscaras: ", (descripcionBuscado) => {
+        let librito = librosColeccion.find(libro => libro.descripcion.toLowerCase() === descripcionBuscado.toLowerCase());
+
+        if (librito) {
+          console.log("titulo encontrado: ")
+          console.table([{
+            titulo: librito.titulo,
+            autor: librito.autor,
+            descripcion: librito.descripcion,
+            precio: librito.precio
+          }]);
+          buscador()
+        } else {
+          console.log("Libro no encontrado")
+          buscador()
+        }
+      });
+    }
+  }
+} 
