@@ -341,6 +341,349 @@ let librosColeccion = [
   }
 
 ]
+let librosRestauracion = [
+  {
+    titulo: "El Señor de los Anillos: La Comunidad del Anillo",
+    autor: "J.R.R. Tolkien",
+    formato: "Tapa dura",
+    precio: 25.99,
+    peso: "1.2 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante A1",
+    fechaPublicacion: "1954-07-29",
+    generos: ["Fantasía", "Aventura"],
+    idioma: "Inglés",
+    descripcion: "La primera parte de la famosa trilogía de Tolkien.",
+    ISBN: "978-0544003415",
+    dimensiones: "15 x 4 x 23 cm",
+    editorial: "Allen & Unwin",
+    numeroPaginas: 423
+  },
+  {
+    titulo: "1984",
+    autor: "George Orwell",
+    formato: "Tapa blanda",
+    precio: 14.99,
+    peso: "0.5 kg",
+    estado: "Usado",
+    ubicacionFisica: "Estante A2",
+    fechaPublicacion: "1949-06-08",
+    generos: ["Distopía", "Política"],
+    idioma: "Inglés",
+    descripcion: "Una novela que describe un mundo totalitario y vigilado.",
+    ISBN: "978-0451524935",
+    dimensiones: "13 x 2 x 20 cm",
+    editorial: "Allen & Unwin",
+    numeroPaginas: 328
+  },
+  {
+    titulo: "Cien años de soledad",
+    autor: "Gabriel García Márquez",
+    formato: "Tapa dura",
+    precio: 19.99,
+    peso: "0.9 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante A3",
+    fechaPublicacion: "1967-05-30",
+    generos: ["Realismo mágico", "Literatura latinoamericana"],
+    idioma: "Español",
+    descripcion: "La historia de la familia Buendía en Macondo.",
+    ISBN: "978-0307474728",
+    dimensiones: "14 x 3 x 22 cm",
+    editorial: "Allen & Unwin",
+    numeroPaginas: 471
+  },
+  {
+    titulo: "Don Quijote de la Mancha",
+    autor: "Miguel de Cervantes",
+    formato: "Tapa dura",
+    precio: 29.99,
+    peso: "1.3 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante A4",
+    fechaPublicacion: "1605-01-16",
+    generos: ["Clásico", "Aventura"],
+    idioma: "Español",
+    descripcion: "Las aventuras del ingenioso hidalgo Don Quijote.",
+    ISBN: "978-8491050293",
+    dimensiones: "16 x 5 x 24 cm",
+    editorial: "Allen & Unwin",
+    numeroPaginas: 863
+  },
+  {
+    titulo: "Los miserables",
+    autor: "Victor Hugo",
+    formato: "Tapa dura",
+    precio: 27.99,
+    peso: "1.5 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante A5",
+    fechaPublicacion: "1862-04-03",
+    generos: ["Drama", "Histórico"],
+    idioma: "Francés",
+    descripcion: "Una obra maestra sobre justicia, redención y amor.",
+    ISBN: "978-0451419439",
+    dimensiones: "17 x 6 x 25 cm",
+    editorial: "Allen & Unwin",
+    numeroPaginas: 1463
+  },
+  {
+    titulo: "Harry Potter y la piedra filosofal",
+    autor: "J.K. Rowling",
+    formato: "Tapa blanda",
+    precio: 18.99,
+    peso: "0.7 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante B1",
+    fechaPublicacion: "1997-06-26",
+    generos: ["Fantasía", "Juvenil"],
+    idioma: "Inglés",
+    descripcion: "La primera aventura de Harry Potter en Hogwarts.",
+    ISBN: "978-0747532699",
+    dimensiones: "14 x 3 x 21 cm",
+    editorial: "Bloomsbury",
+    numeroPaginas: 223
+  },
+  {
+    titulo: "El Hobbit",
+    autor: "J.R.R. Tolkien",
+    formato: "Tapa dura",
+    precio: 20.99,
+    peso: "0.8 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante B2",
+    fechaPublicacion: "1937-09-21",
+    generos: ["Fantasía", "Aventura"],
+    idioma: "Inglés",
+    descripcion: "Las aventuras de Bilbo Bolsón en la Tierra Media.",
+    ISBN: "978-0547928227",
+    dimensiones: "15 x 3 x 22 cm",
+    editorial: "Bloomsbury",
+    numeroPaginas: 310
+  },
+  {
+    titulo: "El nombre del viento",
+    autor: "Patrick Rothfuss",
+    formato: "Tapa blanda",
+    precio: 22.99,
+    peso: "0.9 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante B3",
+    fechaPublicacion: "2007-03-27",
+    generos: ["Fantasía", "Épica"],
+    idioma: "Inglés",
+    descripcion: "La primera parte de la Crónica del Asesino de Reyes.",
+    ISBN: "978-0756404741",
+    dimensiones: "15 x 4 x 23 cm",
+    editorial: "Bloomsbury",
+    numeroPaginas: 662
+  },
+  {
+    titulo: "Los juegos del hambre",
+    autor: "Suzanne Collins",
+    formato: "Tapa blanda",
+    precio: 16.99,
+    peso: "0.6 kg",
+    estado: "Usado",
+    ubicacionFisica: "Estante B4",
+    fechaPublicacion: "2008-09-14",
+    generos: ["Ciencia ficción", "Juvenil"],
+    idioma: "Inglés",
+    descripcion: "Katniss Everdeen lucha por sobrevivir en los juegos.",
+    ISBN: "978-0439023481",
+    dimensiones: "13 x 2 x 20 cm",
+    editorial: "Bloomsbury",
+    numeroPaginas: 374
+  },
+  {
+    titulo: "Fahrenheit 451",
+    autor: "Ray Bradbury",
+    formato: "Tapa dura",
+    precio: 15.99,
+    peso: "0.55 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante B5",
+    fechaPublicacion: "1953-10-19",
+    generos: ["Distopía", "Ciencia ficción"],
+    idioma: "Inglés",
+    descripcion: "Un futuro donde los libros son prohibidos y quemados.",
+    ISBN: "978-1451673319",
+    dimensiones: "14 x 2 x 21 cm",
+    editorial: "Bloomsbury",
+    numeroPaginas: 194
+  },
+  {
+    titulo: "El código Da Vinci",
+    autor: "Dan Brown",
+    formato: "Tapa dura",
+    precio: 21.99,
+    peso: "0.95 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante C1",
+    fechaPublicacion: "2003-04-01",
+    generos: ["Misterio", "Thriller"],
+    idioma: "Inglés",
+    descripcion: "Un thriller sobre secretos ocultos en el arte.",
+    ISBN: "978-0385504201",
+    dimensiones: "15 x 4 x 23 cm",
+    editorial: "Doubleday",
+    numeroPaginas: 689
+  },
+  {
+    titulo: "La sombra del viento",
+    autor: "Carlos Ruiz Zafón",
+    formato: "Tapa blanda",
+    precio: 19.49,
+    peso: "0.85 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante C2",
+    fechaPublicacion: "2001-04-17",
+    generos: ["Misterio", "Drama"],
+    idioma: "Español",
+    descripcion: "Un niño descubre un libro misterioso en Barcelona.",
+    ISBN: "978-8408172177",
+    dimensiones: "14 x 3 x 22 cm",
+    editorial: "Doubleday",
+    numeroPaginas: 565
+  },
+  {
+    titulo: "El alquimista",
+    autor: "Paulo Coelho",
+    formato: "Tapa blanda",
+    precio: 13.99,
+    peso: "0.45 kg",
+    estado: "Usado",
+    ubicacionFisica: "Estante C3",
+    fechaPublicacion: "1988-05-01",
+    generos: ["Ficción", "Filosofía"],
+    idioma: "Portugués",
+    descripcion: "Un joven pastor busca su tesoro personal.",
+    ISBN: "978-0061122415",
+    dimensiones: "12 x 2 x 20 cm",
+    editorial: "Doubleday",
+    numeroPaginas: 208
+  },
+  {
+    titulo: "El retrato de Dorian Gray",
+    autor: "Oscar Wilde",
+    formato: "Tapa dura",
+    precio: 17.49,
+    peso: "0.65 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante C4",
+    fechaPublicacion: "1890-07-01",
+    generos: ["Clásico", "Filosofía"],
+    idioma: "Inglés",
+    descripcion: "La historia de un hombre que nunca envejece.",
+    ISBN: "978-0141439570",
+    dimensiones: "13 x 3 x 21 cm",
+    editorial: "Doubleday",
+    numeroPaginas: 254
+  },
+  {
+    titulo: "Crimen y castigo",
+    autor: "Fiódor Dostoievski",
+    formato: "Tapa dura",
+    precio: 19.99,
+    peso: "1.0 kg",
+    estado: "Usado",
+    ubicacionFisica: "Estante E5",
+    fechaPublicacion: "1866-01-01",
+    generos: ["Drama", "Filosofía"],
+    idioma: "Ruso",
+    descripcion: "Un joven estudiante comete un asesinato y sufre las consecuencias.",
+    ISBN: "978-0140449136",
+    dimensiones: "15 x 4 x 23 cm",
+    editorial: "Fondo de Cultura Económica",
+    numeroPaginas: 671
+  },
+  {
+    titulo: "La Odisea",
+    autor: "Homero",
+    formato: "Tapa dura",
+    precio: 17.49,
+    peso: "0.9 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante F1",
+    fechaPublicacion: "800-01-01",
+    generos: ["Épica", "Clásico"],
+    idioma: "Griego",
+    descripcion: "La travesía de Odiseo para regresar a Ítaca.",
+    ISBN: "978-0140268867",
+    dimensiones: "15 x 4 x 23 cm",
+    editorial: "The Russian Messenger",
+    numeroPaginas: 800
+  },
+  {
+    titulo: "Crimen y castigo",
+    autor: "Fiódor Dostoyevski",
+    formato: "Tapa dura",
+    precio: 19.90,
+    peso: "0.8 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante 4 - Sección 1",
+    fechaPublicacion: "1866-01-01",
+    generos: ["Clásico", "Psicológico", "Drama"],
+    idioma: "Ruso",
+    descripcion: "Un joven estudiante lucha con la culpa tras cometer un crimen.",
+    ISBN: "978-0140449136",
+    dimensiones: "20 x 4 x 25 cm",
+    editorial: "The Russian Messenger",
+    numeroPaginas: 671
+  },
+  {
+    titulo: "Orgullo y prejuicio",
+    autor: "Jane Austen",
+    formato: "Tapa blanda",
+    precio: 14.50,
+    peso: "0.55 kg",
+    estado: "Excelente",
+    ubicacionFisica: "Estante 4 - Sección 2",
+    fechaPublicacion: "1813-01-28",
+    generos: ["Romance", "Clásico", "Costumbrismo"],
+    idioma: "Inglés",
+    descripcion: "La historia de Elizabeth Bennet y su relación con el enigmático señor Darcy.",
+    ISBN: "978-0141439518",
+    dimensiones: "19 x 2 x 23 cm",
+    editorial: "The Russian Messenger",
+    numeroPaginas: 432
+  },
+  {
+    titulo: "La Odisea",
+    autor: "Homero",
+    formato: "Tapa dura",
+    precio: 22.00,
+    peso: "0.9 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante 4 - Sección 3",
+    fechaPublicacion: "800-01-01",
+    generos: ["Clásico", "Mitología", "Aventura"],
+    idioma: "Griego",
+    descripcion: "El regreso de Ulises a Ítaca tras la guerra de Troya.",
+    ISBN: "978-0140268867",
+    dimensiones: "21 x 3.5 x 26 cm",
+    editorial: "The Russian Messenger",
+    numeroPaginas: 541
+  },
+  {
+    titulo: "La divina comedia",
+    autor: "Dante Alighieri",
+    formato: "Tapa dura",
+    precio: 25.00,
+    peso: "1.1 kg",
+    estado: "Nuevo",
+    ubicacionFisica: "Estante 4 - Sección 4",
+    fechaPublicacion: "1320-01-01",
+    generos: ["Clásico", "Poesía", "Religión"],
+    idioma: "Italiano",
+    descripcion: "El viaje alegórico de Dante a través del Infierno, Purgatorio y Paraíso.",
+    ISBN: "978-0140448955",
+    dimensiones: "22 x 4 x 28 cm",
+    editorial: "The Russian Messenger",
+    numeroPaginas: 798
+  }
+
+]
 const { format } = require('path');
 const lib = require('pstree.remy');
 const readline = require('readline');
@@ -359,9 +702,10 @@ function Menu() {
   console.log(" 4. quitar libros")
   console.log(" 5. Estadisticas de los libros")
   console.log(" 6. Editoriales")
-  console.log(" 8. Submenu (iteraciones)")
-  console.log(" 7. descuento")
-  console.log(" 9. Salir del sistema")
+  console.log(" 7. Submenu (iteraciones)")
+  console.log(" 8. descuento")
+  console.log(" 9. reiniciar libros")
+  console.log(" 10. Salir del sistema")
 
   rl.question("Elige una de los opciones: ", (opcion) => {
     switch (opcion) {
@@ -393,6 +737,10 @@ function Menu() {
         Menu();
         break;
       case "9":
+        reinicio();
+        Menu();
+        break;
+      case "10":
         console.log("Adios")
         rl.close();
         break
@@ -662,24 +1010,27 @@ function Menu() {
     Menu();
   }
   function mostrarEstadisticas() {
-    console.table(
-      librosColeccion.map(libro => ({
-        titulo: libro.titulo,
-        autor: libro.autor,
-        formato: libro.formato,
-        peso: libro.peso,
-        estado: libro.estado,
-        ubicacionFisica: libro.ubicacionFisica,
-        fechaPublicacion: libro.fechaPublicacion,
-        generos: libro.generos,
-        idioma: libro.idioma,
-        descripcion: libro.descripcion,
-        ISBN: libro.ISBN,
-        dimensiones: libro.dimensiones,
-        editorial: libro.editorial,
-        numeroPaginas: libro.numeroPaginas
-      }))
-    );
+
+        console.log(`📚 Total de libros: ${librosColeccion.length}`);
+
+          const conteo = librosColeccion.reduce((cuenta, libro) => {
+            cuenta[libro.idioma] = (cuenta[libro.idioma] || 0) + 1;
+            return cuenta;
+          }, {});
+          const formatos = librosColeccion.reduce((formatitos, libro) => {
+            formatitos[libro.formato] = (formatitos[libro.formato] || 0) + 1;
+            return formatitos;
+          }, {});
+
+          const cuenta_genero = {};
+          librosColeccion.forEach(libro => {
+            libro.generos.forEach(genero => {
+              cuenta_genero[genero] = (cuenta_genero[genero] || 0) + 1;
+            });
+          });
+    console.log("📊 Conteo de libros por idioma: ", conteo);
+    console.log("📊 Conteo de libros por formato: ", formatos);
+    console.log("📊 Conteo de libros por género: ", cuenta_genero);
     Menu();
   }
   function Editoriales() {
@@ -881,6 +1232,29 @@ function Menu() {
     }
 
   }
-  const librosMayores = librosColeccion.filter (libro => libro.precio > 50 )
+  function segundoSubMenu() {
+    console.log("SUBMENU 2")
+    console.log ("precios mayores de 50")
+    console.log ("resumen numero de paginas (por numero mas alto (titulo, autor, editorial, paginas))")
+    console.log ("orden de libros por numero de paginas (mayor a menor)")
+    console.log ("libros mayores de 11 dolares (titulo, autor, precio.)")
+    console.log ("libros menores de 100 paginas(titulo, autor, editorial y paginas)")
+    console.log ("libros mayores de 20 dolares (titulo, autor, precio)")
+    console.log ("resumen de libros por numero mas alto de paginas (titulo, autor, editorial, paginas ordenados de mayor a menor.) ")
+    console.log ("buscador")
+
+    function precios_mayores_50() {
+     const librosMayores = librosColeccion.filter (libro => libro.precio > 50 )
+    }
+
+    function numero_paginas() {
+      
+    }
+  }
+
+  function reinicio() {
+    librosColeccion = [...librosRestauracion];
+  }
+  
 
 }
