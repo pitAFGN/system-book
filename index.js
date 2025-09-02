@@ -682,74 +682,87 @@ let librosRestauracion = [
     editorial: "The Russian Messenger",
     numeroPaginas: 798
   }
-
 ]
-const { format } = require('path');
-const lib = require('pstree.remy');
-const readline = require('readline');
+// ==========================
+// 🔧 Configuración de módulos
+// ==========================
+const { format } = require('path');     // módulo de Node.js (no se usa en este fragmento)
+const lib = require('pstree.remy');     // librería externa (no se usa en este fragmento)
+const readline = require('readline');   // módulo para interacción por consola
+
+// Crear interfaz readline para entrada/salida de usuario
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
   terminal: true
 });
-Menu();
 
+// ==========================
+// ▶️ Función principal: Menu()
+// Despliega las opciones y gestiona las acciones del usuario
+// ==========================
 function Menu() {
-  console.log("Menu Interactivo")
-  console.log(" 1. Mostrar Coleccion")
-  console.log(" 2. Agregar libro")
-  console.log(" 3. Agregar 10 libros (predeterminados)")
-  console.log(" 4. quitar libros")
-  console.log(" 5. Estadisticas de los libros")
-  console.log(" 6. Editoriales")
-  console.log(" 7. Submenu (iteraciones)")
-  console.log(" 8. Submenu (manejo metodos de array)")
-  console.log(" 9. reiniciar libros")
-  console.log(" 10. Salir del sistema")
+  console.log("Menu Interactivo");
+  console.log(" 1. Mostrar Coleccion");
+  console.log(" 2. Agregar libro");
+  console.log(" 3. Agregar 10 libros (predeterminados)");
+  console.log(" 4. quitar libros");
+  console.log(" 5. Estadisticas de los libros");
+  console.log(" 6. Editoriales");
+  console.log(" 7. Submenu (iteraciones)");
+  console.log(" 8. Submenu (manejo metodos de array)");
+  console.log(" 9. reiniciar libros");
+  console.log(" 10. Salir del sistema");
 
+  // Leer opción del usuario
   rl.question("Elige una de los opciones: ", (opcion) => {
     switch (opcion) {
       case "1":
-        mostrarLibros();
+        mostrarLibros(); // muestra toda la colección
         Menu();
-        break
+        break;
       case "2":
-        agregarLibro();
-        break
+        agregarLibro(); // agrega un libro nuevo
+        break;
       case "3":
-        agregar10LibrosPredeterminados()
-        break
+        agregar10LibrosPredeterminados(); // agrega un lote de 10 libros
+        break;
       case "4":
-        eliminarLibro();
-        break
+        eliminarLibro(); // elimina un libro
+        break;
       case "5":
-        mostrarEstadisticas();
-        break
+        mostrarEstadisticas(); // muestra estadísticas generales
+        break;
       case "6":
-        Editoriales();
+        Editoriales(); // agrupa libros por editorial
         Menu();
-        break
+        break;
       case "7":
-        subMenu();
+        subMenu(); // submenu con iteraciones
         break;
       case "8":
-        segundoSubMenu();
+        segundoSubMenu(); // submenu con métodos de array
         break;
       case "9":
-        reinicio();
+        reinicio(); // restaura la colección desde respaldo
         Menu();
         break;
       case "10":
-        console.log("Adios")
-        rl.close();
-        process.exit(0);
-        break
+        console.log("Adios");
+        rl.close(); // cierra la interfaz
+        process.exit(0); // termina el programa
+        break;
       default:
-        console.log("Intenta otra opcion")
-        Menu()
+        console.log("Intenta otra opcion");
+        Menu();
         break;
     }
-  })
+  });
+}
+Menu();
+
+// ▶️ Función: mostrarLibros()
+// Recorre la colección y muestra los libros disponibles
   function mostrarLibros() {
     console.table(
       librosColeccion.map(librosColeccion => ({
@@ -760,6 +773,9 @@ function Menu() {
       }))
     )
   }
+// ▶️ Función: agregarLibro()
+// Permite al usuario ingresar un nuevo libro
+// y lo agrega a la colección
   function agregarLibro() {
     console.log("📚 Agregar un libro:");
     rl.question("Título: ", (titulo) => {
@@ -815,6 +831,8 @@ function Menu() {
       });
     });
   }
+// ▶️ Función: agregar10LibrosPredeterminados()
+// Inserta un lote de 10 libros predefinidos en la colección
   function agregar10LibrosPredeterminados() {
     const librosPredeterminados = [
       {
@@ -993,6 +1011,8 @@ function Menu() {
     console.log("✅ 10 libros predeterminados agregados con éxito");
     Menu();
   }
+// ▶️ Función: eliminarLibro()
+//elimina los 5  ultimos libros agregados
   function eliminarLibro() {
     if (librosColeccion.length >= 5) {
       for (let i = 0; i < 5; i++) {
@@ -1010,6 +1030,7 @@ function Menu() {
     }
     Menu();
   }
+  //mostrar estadisiticas de todos los libros generales
   function mostrarEstadisticas() {
 
     console.log(`📚 Total de libros: ${librosColeccion.length}`);
@@ -1034,6 +1055,7 @@ function Menu() {
     console.log("📊 Conteo de libros por género: ", cuenta_genero);
     Menu();
   }
+  //tabla donde los libros son filtrados por editoriales
   function Editoriales() {
     const editorial = librosColeccion.reduce((acumulador, libro) => {
       if (!acumulador[libro.editorial]) {
@@ -1044,6 +1066,7 @@ function Menu() {
     }, {});
     console.table(editorial)
   }
+  //parte del submenu #2 imprime los libros en tabla con un descuento del 20%
   function listadoLibrosConDescuento() {
     let librosFiltrados = librosColeccion.map(libro => ({
       titulo: libro.titulo,
@@ -1054,6 +1077,7 @@ function Menu() {
     }))
     console.table(librosFiltrados);
   }
+  //primer submenu (10 iteraciones)
   function subMenu() {
     console.log("SUBMENU")
     console.log("1. Listado de 10 libros (titulo, autor, editorial y precio)")
@@ -1236,9 +1260,11 @@ function Menu() {
     }
 
   }
+  //encargado de reiniciar los libros, dejando solo 20 originales
   function reinicio() {
     librosColeccion = [...librosRestauracion];
   }
+  //2do submenu en el cual se hace la otra parte del proyecto
   function segundoSubMenu() {
     console.log("SUBMENU 2")
     console.log("1. descuento")
@@ -1264,9 +1290,11 @@ function Menu() {
         case "3":
           numeroPaginas();
           segundoSubMenu();
+          break;
         case "4":
           ordenPaginas();
           segundoSubMenu();
+          break;
         case "5":
           filtro11Dolares();
           segundoSubMenu();
@@ -1295,6 +1323,7 @@ function Menu() {
           break;
       }
     })
+    //funcion que muestra todos los precios mayores a 50 dolares
     function preciosMayores_50() {
       let librosMayores = librosColeccion.filter(libro => libro.precio > 50).map(libro => ({
 
@@ -1305,6 +1334,7 @@ function Menu() {
       console.log("libros con precios mayores a $50:")
       console.table(librosMayores);
     }
+    //funcion que imprime los libros junto a su numero de paginas de mayor a menor
     function numeroPaginas() {
       const Resumen = librosColeccion.map(libro => ({
         titulo: libro.titulo,
@@ -1315,6 +1345,7 @@ function Menu() {
         .sort((x, d) => d.numeroPaginas - x.numeroPaginas);
       console.table(Resumen)
     }
+    //lo msimo que el de arriba practicamente
     function ordenPaginas() {
       const resumenPaginas = librosColeccion.map(libro => ({
         titulo: libro.titulo,
@@ -1324,6 +1355,7 @@ function Menu() {
         .sort((a, b) => b.numeroPaginas - a.numeroPaginas);
       console.table(resumenPaginas)
     }
+    //funcion que meustra solo los libros mayores a 11 dolares
     function filtro11Dolares() {
       let dolares = librosColeccion.filter(libro => libro.precio > 11).map(libro => ({
         titulo: libro.titulo,
@@ -1333,6 +1365,7 @@ function Menu() {
       console.log("libros con un precio mayores a $11: ")
       console.table(dolares);
     }
+    //solo muestra los libros que tengan menos de 100 paginas
     function menora100() {
       let paginas100 = librosColeccion.filter(libro => libro.numeroPaginas < 100).map(libro => ({
         titulo: libro.titulo,
@@ -1343,6 +1376,7 @@ function Menu() {
       console.log("libros con menos de 100 paginas: ")
       console.table(paginas100);
     }
+    //muestra solo los libros que tengan pecios mayores a 20 dolares
     function filtro20Dolares() {
       let dolarcitos = librosColeccion.filter(libro => libro.precio > 20).map(libro => ({
         titulo: libro.titulo,
@@ -1352,6 +1386,7 @@ function Menu() {
         .sort((z, x) => x.precio - z.precio)
       console.table(dolarcitos)
     }
+    //lo mismo que las otras 2 de antes
     function ordenPaginas2() {
       let resumenPaginas1 = librosColeccion.map(libro => ({
         titulo: libro.titulo,
@@ -1362,6 +1397,7 @@ function Menu() {
         .sort((a, b) => b.numeroPaginas - a.numeroPaginas);
       console.table(resumenPaginas1);
     }
+    //submenu que te muestra te filtra solo lo busques
     function buscador() {
       console.log("BUSCADOR")
       console.log("1. buscar por titulo")
@@ -1458,6 +1494,8 @@ function Menu() {
         });
       }
     }
+    // 🔎 Función: buscadoAutor()
+// Busca un libro por el nombre del autor
     function buscadoAutor() {
       rl.question("Ingresa el autor que buscaras: ", (autorBuscado) => {
         let librito = librosColeccion.find(libro => libro.autor.toLowerCase() === autorBuscado.toLowerCase());
@@ -1477,6 +1515,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoFecha()
+// Busca un libro por la fecha de publicación
     function buscadoFecha() {
       rl.question("Ingresa la fecha que buscaras: ", (fechaBuscado) => {
         let librito = librosColeccion.find(libro => libro.fechaPublicacion.toLowerCase() === fechaBuscado.toLowerCase());
@@ -1496,6 +1536,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoGenero()
+// Busca un libro por género (puede tener varios)
     function buscadoGenero() {
       rl.question("Ingresa el genero que buscarás: ", (generoBuscado) => {
         let librito = librosColeccion.find(libro =>
@@ -1518,6 +1560,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoIdioma()
+// Busca un libro por idioma
     function buscadoIdioma() {
       rl.question("Ingresa el idioma que buscaras: ", (idiomaBuscado) => {
         let librito = librosColeccion.find(libro => libro.idioma.toLowerCase() === idiomaBuscado.toLowerCase());
@@ -1537,6 +1581,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoEditorial()
+// Busca un libro por editorial
     function buscadoEditorial() {
       rl.question("Ingresa la editorial que buscaras: ", (editorialBuscado) => {
         let librito = librosColeccion.find(libro => libro.editorial.toLowerCase() === editorialBuscado.toLowerCase());
@@ -1556,6 +1602,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoISBN()
+// Busca un libro por ISBN
     function buscadoISBN() {
       rl.question("Ingresa el ISBN que buscaras: ", (ISBNBuscado) => {
         let librito = librosColeccion.find(libro => libro.ISBN.toLowerCase() === ISBNBuscado.toLowerCase());
@@ -1575,6 +1623,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoUbicacion()
+// Busca un libro por su ubicación física
     function buscadoUbicacion() {
       rl.question("Ingresa la ubicacion que buscaras: ", (ubicacionBuscado) => {
         let librito = librosColeccion.find(libro => libro.ubicacionFisica.toLowerCase() === ubicacionBuscado.toLowerCase());
@@ -1594,6 +1644,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoPaginas()
+// Busca un libro por número de páginas
     function buscadoPaginas() {
       rl.question("Ingresa el numero de paginas que buscaras: ", (paginasBuscado) => {
         // Convertir a número
@@ -1617,6 +1669,8 @@ function Menu() {
         buscador();
       });
     }
+    // 🔎 Función: buscadoEstado()
+// Busca un libro por estado (nuevo/usado, etc.)
     function buscadoEstado() {
       rl.question("Ingresa el estado que buscaras: ", (estadoBuscado) => {
         let librito = librosColeccion.find(libro => libro.estado.toLowerCase() === estadoBuscado.toLowerCase());
@@ -1636,6 +1690,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoFormato()
+// Busca un libro por formato (tapa dura, digital, etc.)
     function buscadoFormato() {
       rl.question("Ingresa el formato que buscaras: ", (formatoBuscado) => {
         let librito = librosColeccion.find(libro => libro.formato.toLowerCase() === formatoBuscado.toLowerCase());
@@ -1655,6 +1711,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoPrecio()
+// Busca un libro por precio exacto
     function buscadoPrecio() {
       rl.question("Ingresa el precio que buscaras: ", (precioBuscado) => {
         const numBuscado = parseFloat(precioBuscado); // convierte lo que escribe el usuario en número
@@ -1674,6 +1732,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoPeso()
+// Busca un libro por peso
     function buscadoPeso() {
       rl.question("Ingresa el peso que buscaras: ", (pesoBuscado) => {
         let librito = librosColeccion.find(libro => libro.peso.toLowerCase() === pesoBuscado.toLowerCase());
@@ -1693,6 +1753,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoDimensiones()
+// Busca un libro por dimensiones físicas
     function buscadoDimensiones() {
       rl.question("Ingresa lsa dimensiones que buscaras: ", (dimensionesBuscado) => {
         let librito = librosColeccion.find(libro => libro.dimensiones.toLowerCase() === dimensionesBuscado.toLowerCase());
@@ -1712,6 +1774,8 @@ function Menu() {
         }
       });
     }
+    // 🔎 Función: buscadoDescripcion()
+// Busca un libro por su descripción
     function buscadoDescripcion() {
       rl.question("Ingresa la descripcion que buscaras: ", (descripcionBuscado) => {
         let librito = librosColeccion.find(libro => libro.descripcion.toLowerCase() === descripcionBuscado.toLowerCase());
@@ -1732,4 +1796,3 @@ function Menu() {
       });
     }
   }
-} 
